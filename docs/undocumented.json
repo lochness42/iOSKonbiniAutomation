@@ -1,0 +1,152 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/Extensions/UIApplicationSetup+LaunchArguments.swift",
+      "line": 10,
+      "symbol": "UIApplicationSetup.defaultLaunchArgumentsSetup(arguments:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/Extensions/UIApplicationSetup+LaunchArguments.swift",
+      "line": 15,
+      "symbol": "UIApplicationSetup.setLaunchArgumentsToDefaultTestArguments()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/Extensions/UIApplicationSetup+LaunchArguments.swift",
+      "line": 19,
+      "symbol": "UIApplicationSetup.setNamedLaunchArgumentParameter(name:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/Extensions/UIApplicationSetup+LaunchArguments.swift",
+      "line": 29,
+      "symbol": "UIApplicationSetup.removeNamedLaunchArgumentParameter(name:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/Extensions/UIApplicationSetup+LaunchParameters.swift",
+      "line": 10,
+      "symbol": "UIApplicationSetup.defaultLaunchEnvironmentSetup(parameters:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/Extensions/UIApplicationSetup+LaunchParameters.swift",
+      "line": 14,
+      "symbol": "UIApplicationSetup.setLaunchEnvironmentToDefaultTestParameters()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/Extensions/UIApplicationSetup+LaunchParameters.swift",
+      "line": 18,
+      "symbol": "UIApplicationSetup.setLaunchEnvironmentParameter(name:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/Extensions/UIApplicationSetup+LaunchParameters.swift",
+      "line": 22,
+      "symbol": "UIApplicationSetup.setLaunchEnvironment(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/Extensions/UITestCase+InterruptionHandlers.swift",
+      "line": 10,
+      "symbol": "UITestCase.SystemAlertHandlerSettings",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/Extensions/UITestCase+InterruptionHandlers.swift",
+      "line": 22,
+      "symbol": "UITestCase.addUISystemAlertHandler(settings:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/UIApplicationSetup.swift",
+      "line": 25,
+      "symbol": "UIApplicationSetup.currentScreen",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/UIApplicationSetup.swift",
+      "line": 41,
+      "symbol": "UIApplicationSetup.init(app:startScreen:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/UITestCase.swift",
+      "line": null,
+      "symbol": "UITestCase",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/UITestCase.swift",
+      "line": 23,
+      "symbol": "UITestCase",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/UITestCase.swift",
+      "line": 24,
+      "symbol": "UITestCase.defaultStartingScreen",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/UITestCase.swift",
+      "line": 45,
+      "symbol": "UITestCase.setUp()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/UITestCase.swift",
+      "line": 62,
+      "symbol": "UITestCase.tearDown()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/UITestScreen/UITestScreen.swift",
+      "line": null,
+      "symbol": "UITestScreen",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/UITestScreen/UITestScreen.swift",
+      "line": 26,
+      "symbol": "UITestScreen",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/UITestScreen/UITestScreen.swift",
+      "line": 33,
+      "symbol": "UITestScreen.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation/iOSKonbiniAutomation/UITestScreen/UITestScreen.swift",
+      "line": 34,
+      "symbol": "UITestScreen.isCurrentScreen",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/lochness42/GIT/bitbucket/iOSKonbiniAutomation"
+}
