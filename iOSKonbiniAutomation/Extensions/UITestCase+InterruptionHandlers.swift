@@ -12,7 +12,7 @@ extension UITestCase {
     var text: String
     var action: String
 
-    init(description: String, text: String, action: String) {
+    public init(description: String, text: String, action: String) {
       self.description = description
       self.text = text
       self.action = action

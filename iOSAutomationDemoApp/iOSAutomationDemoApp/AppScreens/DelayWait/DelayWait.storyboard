@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YDu-g7-yHZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DelayWait-->
+        <scene sceneID="YcT-Jg-8oV">
+            <objects>
+                <viewController storyboardIdentifier="DelayWaitStoryboard" title="DelayWait" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YDu-g7-yHZ" customClass="DelayWaitViewController" customModule="iOSAutomationDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hfl-om-ERV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56f-Ls-HOx">
+                                <rect key="frame" x="176.5" y="322.5" width="22" height="22"/>
+                                <accessibility key="accessibilityConfiguration" identifier="delayWait.show">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <connections>
+                                    <action selector="triggerAction:" destination="YDu-g7-yHZ" eventType="touchUpInside" id="2mX-mE-cQ5"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFb-Cx-ewd">
+                                <rect key="frame" x="160.5" y="286.5" width="54" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="delayWait.hello"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Znw-x3-ngJ">
+                                <rect key="frame" x="177.5" y="333.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="delayWait">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="56f-Ls-HOx" firstAttribute="centerX" secondItem="DxD-7r-tFi" secondAttribute="centerX" id="EqQ-nf-j67"/>
+                            <constraint firstItem="56f-Ls-HOx" firstAttribute="centerY" secondItem="DxD-7r-tFi" secondAttribute="centerY" constant="-10" id="HEp-Rh-ve8"/>
+                            <constraint firstItem="Znw-x3-ngJ" firstAttribute="centerY" secondItem="56f-Ls-HOx" secondAttribute="centerY" constant="10" id="Ug8-Ik-R2s"/>
+                            <constraint firstItem="BFb-Cx-ewd" firstAttribute="centerX" secondItem="hfl-om-ERV" secondAttribute="centerX" id="WaO-86-CM5"/>
+                            <constraint firstItem="56f-Ls-HOx" firstAttribute="top" secondItem="BFb-Cx-ewd" secondAttribute="bottom" constant="15" id="ihk-bm-3B4"/>
+                            <constraint firstItem="Znw-x3-ngJ" firstAttribute="centerX" secondItem="56f-Ls-HOx" secondAttribute="centerX" id="whZ-hn-33U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DxD-7r-tFi"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="56f-Ls-HOx" id="3Zr-So-ckF"/>
+                        <outlet property="activityIndicator" destination="Znw-x3-ngJ" id="A2B-pw-gic"/>
+                        <outlet property="helloLabel" destination="BFb-Cx-ewd" id="aDj-Zw-lpN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aKd-gm-cSq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-90.400000000000006" y="155.17241379310346"/>
+        </scene>
+    </scenes>
+</document>

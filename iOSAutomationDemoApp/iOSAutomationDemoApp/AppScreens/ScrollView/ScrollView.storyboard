@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ThE-cQ-Gb9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scroll View View Controller-->
+        <scene sceneID="VDg-kO-6EH">
+            <objects>
+                <viewController storyboardIdentifier="ScrollViewStoryboard" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ThE-cQ-Gb9" customClass="ScrollViewViewController" customModule="iOSAutomationDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f2Z-wv-Xoc">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHV-QY-zGi">
+                                <rect key="frame" x="0.0" y="20" width="340" height="1000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVT-CU-Q9l">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="3000"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxl-ww-HzR" userLabel="Show alert">
+                                                <rect key="frame" x="0.0" y="2864" width="340" height="36"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="scrollview.showAlert"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Bottom of scroll view"/>
+                                                <connections>
+                                                    <action selector="showAlert:" destination="ThE-cQ-Gb9" eventType="touchUpInside" id="oVr-nB-soV"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ia9-ib-qs1">
+                                                <rect key="frame" x="0.0" y="10" width="340" height="72"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="scrollview.top">
+                                                    <bool key="isElement" value="NO"/>
+                                                </accessibility>
+                                                <string key="text">Top of scrollview
+
+Scroll down</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18j-Pu-p2Y">
+                                                <rect key="frame" x="0.0" y="1452.5" width="340" height="95.5"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="scrollview.middle">
+                                                    <bool key="isElement" value="NO"/>
+                                                </accessibility>
+                                                <string key="text">You've reached
+middle of scrollview
+
+Keep scrolling</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="18j-Pu-p2Y" firstAttribute="trailing" secondItem="gxl-ww-HzR" secondAttribute="trailing" id="12K-YJ-RTx"/>
+                                            <constraint firstAttribute="top" secondItem="ia9-ib-qs1" secondAttribute="top" constant="-10" id="Ih5-Qi-vv4"/>
+                                            <constraint firstItem="18j-Pu-p2Y" firstAttribute="centerY" secondItem="RVT-CU-Q9l" secondAttribute="centerY" id="POF-9O-JtM"/>
+                                            <constraint firstItem="18j-Pu-p2Y" firstAttribute="leading" secondItem="gxl-ww-HzR" secondAttribute="leading" id="U6L-QA-6CE"/>
+                                            <constraint firstItem="18j-Pu-p2Y" firstAttribute="leading" secondItem="ia9-ib-qs1" secondAttribute="leading" id="cYU-eX-KrL"/>
+                                            <constraint firstItem="18j-Pu-p2Y" firstAttribute="leading" secondItem="RVT-CU-Q9l" secondAttribute="leading" id="jn7-0K-Z7Y"/>
+                                            <constraint firstAttribute="bottom" secondItem="gxl-ww-HzR" secondAttribute="bottom" constant="100" id="m1l-7X-tKN"/>
+                                            <constraint firstItem="ia9-ib-qs1" firstAttribute="width" secondItem="RVT-CU-Q9l" secondAttribute="width" id="mKg-zd-4Os"/>
+                                            <constraint firstItem="18j-Pu-p2Y" firstAttribute="width" secondItem="RVT-CU-Q9l" secondAttribute="width" id="yCJ-2V-iV2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RVT-CU-Q9l" firstAttribute="top" secondItem="sHV-QY-zGi" secondAttribute="top" id="0Tk-H0-nRM"/>
+                                    <constraint firstAttribute="bottom" secondItem="RVT-CU-Q9l" secondAttribute="bottom" id="7y3-Oj-5Je"/>
+                                    <constraint firstAttribute="trailing" secondItem="RVT-CU-Q9l" secondAttribute="trailing" id="EO7-jL-Ab5"/>
+                                    <constraint firstItem="RVT-CU-Q9l" firstAttribute="width" secondItem="sHV-QY-zGi" secondAttribute="width" id="HmG-Sh-s82"/>
+                                    <constraint firstItem="RVT-CU-Q9l" firstAttribute="leading" secondItem="sHV-QY-zGi" secondAttribute="leading" id="bAH-5J-NJg"/>
+                                    <constraint firstItem="RVT-CU-Q9l" firstAttribute="height" secondItem="sHV-QY-zGi" secondAttribute="height" multiplier="3" id="gyS-w2-ube"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="scrollview"/>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sHV-QY-zGi" firstAttribute="width" secondItem="f2Z-wv-Xoc" secondAttribute="width" id="0rg-NX-xKq"/>
+                            <constraint firstItem="sHV-QY-zGi" firstAttribute="height" secondItem="f2Z-wv-Xoc" secondAttribute="height" id="cwG-nD-UDD"/>
+                            <constraint firstItem="sHV-QY-zGi" firstAttribute="leading" secondItem="f2Z-wv-Xoc" secondAttribute="leading" id="kf1-f1-ZS9"/>
+                            <constraint firstItem="sHV-QY-zGi" firstAttribute="top" secondItem="jhX-nl-J2X" secondAttribute="top" id="qUB-5e-yca"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jhX-nl-J2X"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TuP-0V-d89"/>
+                    <size key="freeformSize" width="340" height="1000"/>
+                    <connections>
+                        <outlet property="parentView" destination="f2Z-wv-Xoc" id="kX8-lY-REb"/>
+                        <outlet property="scrollView" destination="sHV-QY-zGi" id="Wj5-Tg-scz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dct-P0-764" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784.79999999999995" y="152.47376311844079"/>
+        </scene>
+    </scenes>
+</document>

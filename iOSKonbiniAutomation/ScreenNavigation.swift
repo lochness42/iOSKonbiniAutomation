@@ -25,12 +25,12 @@ var navigationHelper = UITestScreenPathFinder()
  - Parameter line: The line number on which failure occurred. Defaults to the line number on which this function was called.
  */
 public func NavigateToScreen(to: UITestScreen.Type, file: StaticString = #file, line: UInt = #line) {
-  let path = navigationHelper.findPath(from: appSettings!.currentScreen, to: to)
+  let path = navigationHelper.findPath(from: screen(appSettings!.currentScreen), to: screen(to))
   XCTAssertNotNil(path, "There is no path between \(String(describing: appSettings!.currentScreen)) and \(String(describing: to))", file: file, line: line)
   for step in path! {
     step.transition()
     appSettings!.currentScreen = step.target
-    ScreenIsActive(to, file: file, line: line)
+    ScreenIsActive(screen(appSettings!.currentScreen), file: file, line: line)
     if let postTransition = step.postTransition {
       postTransition()
     }
@@ -60,6 +60,30 @@ public func ScreenIsActive(_ screen: UITestScreen.Type, within timeout: TimeInte
   }
   XCTAssertTrue(loaded, "Screen \(String(describing: screen)) haven't been loaded within \(timeout)s", file: file, line: line)
   appSettings!.currentScreen = screen
+}
+
+/**
+ Tries to check whether screen becomes active within timeout. If we're on the screen current screen is being set to active screen
+ - WARNING: fails test if screen isn't loaded within timeout
+
+ ## Usage Example: ##
+ ````
+ ScreenIsActive(UITestScreenA())
+ ````
+
+ - Parameter screen: instance of screen we expect to be active
+ - Parameter timeout: timeout
+ - Parameter file: The file in which failure occurred. Defaults to the file name of the test case in which this function was called.
+ - Parameter line: The line number on which failure occurred. Defaults to the line number on which this function was called.
+ */
+public func ScreenIsActive(_ screen: UITestScreen, within timeout: TimeInterval = defaultScreenWaitTimeout, file: StaticString = #file, line: UInt = #line) {
+  var loaded = false
+  loaded =  repeatUntilTrueOrTimeout(repeatedAction: { return screen.isCurrentScreen}, timeout: timeout)
+  if !loaded {
+    loaded = screen.isCurrentScreen
+  }
+  XCTAssertTrue(loaded, "Screen \(String(describing: type(of: screen))) haven't been loaded within \(timeout)s", file: file, line: line)
+  appSettings!.currentScreen = type(of: screen)
 }
 
 /**

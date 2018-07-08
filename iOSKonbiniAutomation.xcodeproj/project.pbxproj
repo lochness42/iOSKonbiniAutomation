@@ -15,11 +15,12 @@
 		103134C820DB0BDB00BDE3E2 /* UIApplicationSetup+LaunchArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103134C720DB0BDB00BDE3E2 /* UIApplicationSetup+LaunchArguments.swift */; };
 		103134CA20DB0C0000BDE3E2 /* UIApplicationSetup+LaunchParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103134C920DB0C0000BDE3E2 /* UIApplicationSetup+LaunchParameters.swift */; };
 		10B2BA9120DEB54C008D9036 /* UITestScreen+ScreenGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B2BA9020DEB54C008D9036 /* UITestScreen+ScreenGraph.swift */; };
-		10B2BA9420DED213008D9036 /* GraphFinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B2BA9320DED213008D9036 /* GraphFinding.swift */; };
+		10B2BA9420DED213008D9036 /* GraphPathFinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B2BA9320DED213008D9036 /* GraphPathFinding.swift */; };
 		10B2BA9820DEF84A008D9036 /* UITestScreenPathFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B2BA9720DEF84A008D9036 /* UITestScreenPathFinder.swift */; };
 		10B2BA9A20DEF890008D9036 /* UITestScreenEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B2BA9920DEF890008D9036 /* UITestScreenEdge.swift */; };
 		10B2BA9C20DEFA99008D9036 /* TraitStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B2BA9B20DEFA99008D9036 /* TraitStrategy.swift */; };
 		10B2BA9F20DF099F008D9036 /* ScreenNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B2BA9E20DF099F008D9036 /* ScreenNavigation.swift */; };
+		EBAA190D20EA38AB006B9A8A /* UIApplicationSetupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAA190C20EA38AB006B9A8A /* UIApplicationSetupTests.swift */; };
 		EBC7FC3E20D914B600903CC3 /* iOSBenrinaAutomationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC7FC3D20D914B600903CC3 /* iOSBenrinaAutomationHelpers.framework */; };
 		EBC7FC4220D9172F00903CC3 /* UIApplicationSetup+AppLaunchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7FC4120D9172F00903CC3 /* UIApplicationSetup+AppLaunchSettings.swift */; };
 		EBC7FC4420D9178F00903CC3 /* ElementInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7FC4320D9178F00903CC3 /* ElementInteraction.swift */; };
@@ -49,11 +50,12 @@
 		103134C720DB0BDB00BDE3E2 /* UIApplicationSetup+LaunchArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplicationSetup+LaunchArguments.swift"; sourceTree = "<group>"; };
 		103134C920DB0C0000BDE3E2 /* UIApplicationSetup+LaunchParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplicationSetup+LaunchParameters.swift"; sourceTree = "<group>"; };
 		10B2BA9020DEB54C008D9036 /* UITestScreen+ScreenGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITestScreen+ScreenGraph.swift"; sourceTree = "<group>"; };
-		10B2BA9320DED213008D9036 /* GraphFinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphFinding.swift; sourceTree = "<group>"; };
+		10B2BA9320DED213008D9036 /* GraphPathFinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPathFinding.swift; sourceTree = "<group>"; };
 		10B2BA9720DEF84A008D9036 /* UITestScreenPathFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestScreenPathFinder.swift; sourceTree = "<group>"; };
 		10B2BA9920DEF890008D9036 /* UITestScreenEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestScreenEdge.swift; sourceTree = "<group>"; };
 		10B2BA9B20DEFA99008D9036 /* TraitStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitStrategy.swift; sourceTree = "<group>"; };
 		10B2BA9E20DF099F008D9036 /* ScreenNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNavigation.swift; sourceTree = "<group>"; };
+		EBAA190C20EA38AB006B9A8A /* UIApplicationSetupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationSetupTests.swift; sourceTree = "<group>"; };
 		EBC7FC3D20D914B600903CC3 /* iOSBenrinaAutomationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOSBenrinaAutomationHelpers.framework; path = Carthage/Build/iOS/iOSBenrinaAutomationHelpers.framework; sourceTree = "<group>"; };
 		EBC7FC4120D9172F00903CC3 /* UIApplicationSetup+AppLaunchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplicationSetup+AppLaunchSettings.swift"; sourceTree = "<group>"; };
 		EBC7FC4320D9178F00903CC3 /* ElementInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementInteraction.swift; sourceTree = "<group>"; };
@@ -121,7 +123,8 @@
 			children = (
 				103134A020D82D4900BDE3E2 /* iOSKonbiniAutomationTests.swift */,
 				103134A220D82D4900BDE3E2 /* Info.plist */,
-				10B2BA9320DED213008D9036 /* GraphFinding.swift */,
+				10B2BA9320DED213008D9036 /* GraphPathFinding.swift */,
+				EBAA190C20EA38AB006B9A8A /* UIApplicationSetupTests.swift */,
 			);
 			path = iOSKonbiniAutomationTests;
 			sourceTree = "<group>";
@@ -280,8 +283,6 @@
 				"$(SDKROOT)/../../Library/Frameworks/XCTest.framework",
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/iOSBenrinaAutomationHelpers.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/XCTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -314,7 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10B2BA9420DED213008D9036 /* GraphFinding.swift in Sources */,
+				EBAA190D20EA38AB006B9A8A /* UIApplicationSetupTests.swift in Sources */,
+				10B2BA9420DED213008D9036 /* GraphPathFinding.swift in Sources */,
 				103134A120D82D4900BDE3E2 /* iOSKonbiniAutomationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

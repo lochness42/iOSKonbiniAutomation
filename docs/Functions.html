@@ -103,6 +103,9 @@
                 <a href="Functions.html#/s:20iOSKonbiniAutomation6Rotate2on8rotation12withVelocity4file4lineySo11XCUIElementC_12CoreGraphics7CGFloatVALs12StaticStringVSutF">Rotate(on:rotation:withVelocity:file:line:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="Functions.html#/s:20iOSKonbiniAutomation14ScreenIsActive_6within4file4lineyAA06UITestC0C_Sds12StaticStringVSutF">ScreenIsActive(_:within:file:line:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Functions.html#/s:20iOSKonbiniAutomation14ScreenIsActive_6within4file4lineyAA06UITestC0Cm_Sds12StaticStringVSutF">ScreenIsActive(_:within:file:line:)</a>
               </li>
               <li class="nav-group-task">
@@ -137,6 +140,17 @@
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:20iOSKonbiniAutomation7WaitFor7element2to6atMost4file4lineySo11XCUIElementC_Say010iOSBenrinaB7Helpers16ElementPredicateOGSds12StaticStringVSutF">WaitFor(element:to:atMost:file:line:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:20iOSKonbiniAutomation6screenyxxmAA33UITestScreenInitialisableProtocolRzlF">screen(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/UITestScreenInitialisableProtocol.html">UITestScreenInitialisableProtocol</a>
               </li>
             </ul>
           </li>
@@ -2209,6 +2223,96 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:20iOSKonbiniAutomation14ScreenIsActive_6within4file4lineyAA06UITestC0C_Sds12StaticStringVSutF"></a>
+                    <a name="//apple_ref/swift/Function/ScreenIsActive(_:within:file:line:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20iOSKonbiniAutomation14ScreenIsActive_6within4file4lineyAA06UITestC0C_Sds12StaticStringVSutF">ScreenIsActive(_:within:file:line:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tries to check whether screen becomes active within timeout. If we&rsquo;re on the screen current screen is being set to active screen</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    fails test if screen isn&rsquo;t loaded within timeout
+
+</div>
+<h2 id='usage-example' class='heading'>Usage Example:</h2>
+<pre class="highlight swift"><code><span class="kt">ScreenIsActive</span><span class="p">(</span><span class="kt">UITestScreenA</span><span class="p">())</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="kt">ScreenIsActive</span><span class="p">(</span><span class="n">_</span> <span class="nv">screen</span><span class="p">:</span> <span class="kt"><a href="Classes/UITestScreen.html">UITestScreen</a></span><span class="p">,</span> <span class="n">within</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="n"><a href="Global Variables.html#/s:20iOSKonbiniAutomation24defaultScreenWaitTimeoutSdvp">defaultScreenWaitTimeout</a></span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">StaticString</span> <span class="o">=</span> <span class="kd">#file</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="kd">#line</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>screen</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>instance of screen we expect to be active</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>timeout</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The file in which failure occurred. Defaults to the file name of the test case in which this function was called.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>line</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The line number on which failure occurred. Defaults to the line number on which this function was called.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:20iOSKonbiniAutomation32NoActivityIndicatorsAreDisplayed7timeout4file4lineySd_s12StaticStringVSutF"></a>
                     <a name="//apple_ref/swift/Function/NoActivityIndicatorsAreDisplayed(timeout:file:line:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:20iOSKonbiniAutomation32NoActivityIndicatorsAreDisplayed7timeout4file4lineySd_s12StaticStringVSutF">NoActivityIndicatorsAreDisplayed(timeout:file:line:)</a>
@@ -2281,10 +2385,67 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20iOSKonbiniAutomation6screenyxxmAA33UITestScreenInitialisableProtocolRzlF"></a>
+                    <a name="//apple_ref/swift/Function/screen(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20iOSKonbiniAutomation6screenyxxmAA33UITestScreenInitialisableProtocolRzlF">screen(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>provides instance of screen object</p>
+<h2 id='usage-example' class='heading'>Usage Example:</h2>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">screen</span><span class="p">:</span> <span class="kt">ScreenA</span> <span class="o">=</span> <span class="nf">screen</span><span class="p">(</span><span class="kt">ScreenA</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">screen</span><span class="o">&lt;</span><span class="kt">ScreenObject</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">instanceOfScreen</span><span class="p">:</span> <span class="kt">ScreenObject</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ScreenObject</span> <span class="k">where</span> <span class="kt">ScreenObject</span> <span class="p">:</span> <span class="kt"><a href="Protocols/UITestScreenInitialisableProtocol.html">UITestScreenInitialisableProtocol</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>instanceOfScreen</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>screen object type that we want instance of</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>new screen instance if it wasn&rsquo;t instantiated before, otherwise returns existing object</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-06-24)</p>
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-07-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

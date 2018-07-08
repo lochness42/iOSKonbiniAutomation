@@ -36,8 +36,9 @@ class UITestScreenPathFinder {
 
    - Parameter from: starting screen
    - Parameter to: target screen
+   - Returns: array of edges that we have to traverse through to get from starting screen to target screen
    */
-  public func findPath(from: UITestScreen.Type, to: UITestScreen.Type) -> [UITestScreenEdge]? {
+  public func findPath(from: UITestScreen, to: UITestScreen) -> [UITestScreenEdge]? {
     resetVariables()
 
     processScreen(from)
@@ -45,10 +46,10 @@ class UITestScreenPathFinder {
     while(queuedScreenNodesWithEdge.count > 0 && pathsToScreen[String(describing: to)] == nil) {
       let nextScreenToProcess = queuedScreenNodesWithEdge.first!
       queuedScreenNodesWithEdge.removeFirst()
-      processScreen(nextScreenToProcess.edge.target)
+      processScreen(screen(nextScreenToProcess.edge.target))
       setPathToScreen(nextScreenToProcess)
     }
-    return pathsToScreen[String(describing: to)]
+    return pathsToScreen[String(describing: type(of: to))]
   }
 
   /**
@@ -67,9 +68,8 @@ class UITestScreenPathFinder {
    Processes current screen. Adds shortest path, updates queued screen nodes
    - Parameter screen: screen to be processed
    */
-  private func processScreen(_ screen: UITestScreen.Type) {
-    let screenObject = screen.init()
-    let currentlyEvaluatedEdges: [UITestScreenEdge] = screenObject.screenConnections
+  private func processScreen(_ screen: UITestScreen) {
+    let currentlyEvaluatedEdges: [UITestScreenEdge] = screen.screenConnections
     for screenEdge in currentlyEvaluatedEdges {
       let checkedScreen = screenEdge.target
       if !hasScreenBeenAlreadyChecked(checkedScreen) && !isScreenAlreadyQueued(checkedScreen) {

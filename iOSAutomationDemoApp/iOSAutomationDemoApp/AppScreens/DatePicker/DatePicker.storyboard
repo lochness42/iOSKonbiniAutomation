@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4qb-YA-rn0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DatePicker-->
+        <scene sceneID="kRl-jh-w94">
+            <objects>
+                <viewController title="DatePicker" modalPresentationStyle="currentContext" id="4qb-YA-rn0" customClass="DatePickerViewController" customModule="iOSAutomationDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GvI-at-gVX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Tbf-Qf-z2m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="302"/>
+                                <date key="date" timeIntervalSinceReferenceDate="552599539.19580996">
+                                    <!--2018-07-06 19:52:19 +0000-->
+                                </date>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="datePicker.date"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="datePickerValueChanged:" destination="4qb-YA-rn0" eventType="valueChanged" id="bDp-os-ZeI"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh8-Wa-VkX">
+                                <rect key="frame" x="0.0" y="307" width="375" height="36"/>
+                                <accessibility key="accessibilityConfiguration" identifier="datePicker.mode">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Mode button"/>
+                                <connections>
+                                    <segue destination="LoE-eZ-jce" kind="show" identifier="datePickerMode" id="ZgR-DA-XIf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set datePicker value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtT-Bx-Hev">
+                                <rect key="frame" x="0.0" y="389" width="375" height="24"/>
+                                <accessibility key="accessibilityConfiguration" identifier="datePicker.currentValue">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmb-8H-5DZ">
+                                <rect key="frame" x="0.0" y="348" width="375" height="36"/>
+                                <accessibility key="accessibilityConfiguration" identifier="datePicker.locale">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Locale Button"/>
+                                <connections>
+                                    <segue destination="8Nb-Vf-o9C" kind="show" identifier="datePickerLocale" id="umW-CY-vkI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="datePicker">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="Tbf-Qf-z2m" firstAttribute="centerX" secondItem="QtT-Bx-Hev" secondAttribute="centerX" id="799-e5-Qds"/>
+                            <constraint firstItem="QtT-Bx-Hev" firstAttribute="width" secondItem="GvI-at-gVX" secondAttribute="width" id="7JO-ae-tC5"/>
+                            <constraint firstItem="kh8-Wa-VkX" firstAttribute="leading" secondItem="El0-bQ-Xul" secondAttribute="leading" id="Hpq-17-aUu"/>
+                            <constraint firstItem="jmb-8H-5DZ" firstAttribute="top" secondItem="kh8-Wa-VkX" secondAttribute="bottom" constant="5" id="NTy-Ob-91Y"/>
+                            <constraint firstItem="kh8-Wa-VkX" firstAttribute="top" secondItem="Tbf-Qf-z2m" secondAttribute="bottom" constant="5" id="QXR-Rp-gsu"/>
+                            <constraint firstItem="Tbf-Qf-z2m" firstAttribute="width" secondItem="GvI-at-gVX" secondAttribute="width" id="bqQ-8J-Gd2"/>
+                            <constraint firstItem="kh8-Wa-VkX" firstAttribute="width" secondItem="GvI-at-gVX" secondAttribute="width" id="c6k-5P-2S1"/>
+                            <constraint firstItem="El0-bQ-Xul" firstAttribute="top" secondItem="Tbf-Qf-z2m" secondAttribute="top" id="exo-wk-Ea8"/>
+                            <constraint firstItem="jmb-8H-5DZ" firstAttribute="leading" secondItem="El0-bQ-Xul" secondAttribute="leading" id="nU1-ju-RkM"/>
+                            <constraint firstItem="QtT-Bx-Hev" firstAttribute="top" secondItem="jmb-8H-5DZ" secondAttribute="bottom" constant="5" id="uCi-BV-fbh"/>
+                            <constraint firstItem="jmb-8H-5DZ" firstAttribute="width" secondItem="GvI-at-gVX" secondAttribute="width" id="uKu-i5-7Xk"/>
+                            <constraint firstItem="Tbf-Qf-z2m" firstAttribute="leading" secondItem="GvI-at-gVX" secondAttribute="leading" id="vSv-oX-GHd"/>
+                            <constraint firstItem="Tbf-Qf-z2m" firstAttribute="height" secondItem="GvI-at-gVX" secondAttribute="height" multiplier="0.5" id="ysl-v2-lfH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="El0-bQ-Xul"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="datePicker" destination="Tbf-Qf-z2m" id="x5E-th-MMz"/>
+                        <outlet property="datePickerLocaleButton" destination="jmb-8H-5DZ" id="F5k-UD-905"/>
+                        <outlet property="datePickerModeButton" destination="kh8-Wa-VkX" id="XqT-VJ-NJn"/>
+                        <outlet property="datePickerValueLabel" destination="QtT-Bx-Hev" id="MNk-Qg-OoM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oc2-le-jyw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39.200000000000003" y="122.78860569715144"/>
+        </scene>
+        <!--DatePickerMode-->
+        <scene sceneID="ePr-rE-4yp">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DatePickerModeStoryboard" storyboardName="DatePickerMode" id="LoE-eZ-jce" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZg-Es-xVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="715" y="-84"/>
+        </scene>
+        <!--DatePickerLocale-->
+        <scene sceneID="84s-ZK-lOr">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DatePickerLocaleStoryboard" storyboardName="DatePickerLocale" id="8Nb-Vf-o9C" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XEP-Wp-3iQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="185"/>
+        </scene>
+    </scenes>
+</document>

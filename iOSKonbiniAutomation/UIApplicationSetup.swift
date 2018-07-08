@@ -12,15 +12,13 @@ import XCTest
  Object describing application under tests' setup
  */
 open class UIApplicationSetup {
-  private var _app: XCUIApplication
-
   /**
    Getter for  XCUIApplication object
    - Returns: Reference to XCUIApplication
    */
-  public var app: XCUIApplication {
-    return _app
-  }
+  lazy public var app: XCUIApplication = {
+    return .init()
+  }()
 
   public var currentScreen: UITestScreen.Type
 
@@ -38,16 +36,20 @@ open class UIApplicationSetup {
    */
   var localisation: Localisation?
 
-  public init(app: XCUIApplication = .init(), startScreen: UITestScreen.Type) {
-    self._app = app
+  public init(startScreen: UITestScreen.Type) {
     self.currentScreen = startScreen
   }
+
+//  public init(app: XCUIApplication = .init(), startScreen: UITestScreen.Type) {
+//    self.currentScreen = startScreen
+//    self.app = app
+//  }
 
   /**
    Localisation setter to be used for application launch
    - Parameter locale: locale to be used when launching app
    */
-  public func setLocaleApp(locale: Localisation) {
+  public func setAppLocale(locale: Localisation) {
     localisation = locale
   }
 

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yJo-La-FZf">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DatePickerLocale-->
+        <scene sceneID="4Vb-kD-3Dv">
+            <objects>
+                <viewController storyboardIdentifier="DatePickerLocaleStoryboard" title="DatePickerLocale" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pCj-bc-DHL" customClass="DatePickerLocaleViewController" customModule="iOSAutomationDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UC6-E8-zm1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9N-5A-fjd">
+                                <rect key="frame" x="0.0" y="66.5" width="375" height="600.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="datePickerLocale.locale">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <outlet property="dataSource" destination="pCj-bc-DHL" id="p8L-Z5-PKK"/>
+                                    <outlet property="delegate" destination="pCj-bc-DHL" id="BCI-He-aut"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country name for locale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycq-d5-J5Z">
+                                <rect key="frame" x="0.0" y="64" width="375" height="66.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="datePickerLocale.countryName">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="datePickerLocale">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="Ycq-d5-J5Z" firstAttribute="height" secondItem="UC6-E8-zm1" secondAttribute="height" multiplier="0.1" id="5Xe-zh-zNV"/>
+                            <constraint firstItem="Ycq-d5-J5Z" firstAttribute="top" secondItem="eFf-YV-79i" secondAttribute="top" id="Aam-Jg-X8D"/>
+                            <constraint firstItem="J9N-5A-fjd" firstAttribute="height" secondItem="UC6-E8-zm1" secondAttribute="height" multiplier="0.9" id="KFH-1E-njW"/>
+                            <constraint firstItem="J9N-5A-fjd" firstAttribute="width" secondItem="UC6-E8-zm1" secondAttribute="width" id="bLd-PM-Xe4"/>
+                            <constraint firstItem="Ycq-d5-J5Z" firstAttribute="width" secondItem="UC6-E8-zm1" secondAttribute="width" id="jIb-eS-yOE"/>
+                            <constraint firstItem="Ycq-d5-J5Z" firstAttribute="centerX" secondItem="J9N-5A-fjd" secondAttribute="centerX" id="l2a-dA-Pqg"/>
+                            <constraint firstItem="Ycq-d5-J5Z" firstAttribute="leading" secondItem="UC6-E8-zm1" secondAttribute="leading" id="tec-Z5-jsB"/>
+                            <constraint firstItem="eFf-YV-79i" firstAttribute="bottom" secondItem="J9N-5A-fjd" secondAttribute="bottom" id="vF9-7g-fYR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eFf-YV-79i"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="DatePickerLocale" id="vsz-0n-vhL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="B0w-DV-5t3">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="cancel"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cancelLocaleSetup:" destination="pCj-bc-DHL" id="2gE-bf-QI5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="FDd-Dr-TVw">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="save"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="saveLocale:" destination="pCj-bc-DHL" id="dQF-tn-oRU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countryNameLabel" destination="Ycq-d5-J5Z" id="mm2-Ud-O2K"/>
+                        <outlet property="localePicker" destination="J9N-5A-fjd" id="o54-Om-9Ho"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSN-ZI-EMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="164.16791604197903"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hrY-RY-YaV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yJo-La-FZf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ms4-nY-ler">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pCj-bc-DHL" kind="relationship" relationship="rootViewController" id="QzK-vZ-gwY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDf-VE-fTs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7.2000000000000002" y="164.16791604197903"/>
+        </scene>
+    </scenes>
+</document>

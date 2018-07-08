@@ -10,7 +10,7 @@ extension UITestScreen {
   /**
    Returns string representing current screen object
    */
-  var screenName: String {
+  public var screenName: String {
     let thisScreenType = type(of: self)
     return String(describing: thisScreenType)
   }
@@ -28,7 +28,7 @@ extension UITestScreen {
    - Parameter transition: closure containing steps to make transition from current screen ot target screen
    - Parameter postTransition: optional steps to be performed after getting to target screen
    */
-  func connectTo(screen: UITestScreen.Type, transition: @escaping () -> Void, postTransition: (() -> Void)? = nil) {
+  public func connectTo(screen: UITestScreen.Type, transition: @escaping () -> Void, postTransition: (() -> Void)? = nil) {
     let connection: UITestScreenEdge = .init(source: type(of: self), target: screen, transition: transition, postTransition: postTransition)
     if !self.screenConnections.contains(connection) {
       self.screenConnections.append(connection)

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ny0-P8-yUV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="9Lk-2Z-ufY">
+            <objects>
+                <viewController id="Xn6-TS-RPl" customClass="HomeViewController" customModule="iOSAutomationDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1CD-0G-QhC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ap3-f4-ulj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="AO5-qQ-imc">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AO5-qQ-imc" id="Vm7-Am-riW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="home.table"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xn6-TS-RPl" id="C7D-cU-vOn"/>
+                                    <outlet property="delegate" destination="Xn6-TS-RPl" id="MnH-aK-xiM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="home">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="Ap3-f4-ulj" firstAttribute="leading" secondItem="1CD-0G-QhC" secondAttribute="leading" id="CE5-5v-2L6"/>
+                            <constraint firstItem="Ap3-f4-ulj" firstAttribute="width" secondItem="LZy-JC-DcM" secondAttribute="width" id="ED1-rI-aVe"/>
+                            <constraint firstItem="Ap3-f4-ulj" firstAttribute="height" secondItem="LZy-JC-DcM" secondAttribute="height" id="Q3g-9g-dgf"/>
+                            <constraint firstItem="Ap3-f4-ulj" firstAttribute="bottom" secondItem="LZy-JC-DcM" secondAttribute="bottom" id="y3C-Td-KjU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LZy-JC-DcM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="k9A-Ld-h3S">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="home.navigation"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="homeTableView" destination="Ap3-f4-ulj" id="KDN-cz-dxJ"/>
+                        <segue destination="cqc-mo-vR6" kind="show" identifier="DelayWait" id="1L6-lN-KlS"/>
+                        <segue destination="7LZ-Vs-tHD" kind="show" identifier="DatePicker" id="0R6-eh-Awo"/>
+                        <segue destination="qKr-zr-KbU" kind="show" identifier="ScrollView" id="98S-vg-I9f"/>
+                        <segue destination="QqZ-y7-qQh" kind="show" identifier="Map" id="1if-ht-Dtv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vuh-ZN-TzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159" y="72"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="v3k-ce-CY2">
+            <objects>
+                <navigationController title="Home" automaticallyAdjustsScrollViewInsets="NO" id="Ny0-P8-yUV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bG5-yQ-zJ1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xn6-TS-RPl" kind="relationship" relationship="rootViewController" id="5Zo-WW-DYn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFx-YP-CNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-940" y="72"/>
+        </scene>
+        <!--DelayWait-->
+        <scene sceneID="euk-w8-4yU">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DelayWaitStoryboard" storyboardName="DelayWait" id="cqc-mo-vR6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aOu-Iq-U6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="-184"/>
+        </scene>
+        <!--DatePicker-->
+        <scene sceneID="au0-Kb-CVh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DatePicker" id="7LZ-Vs-tHD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81Z-EN-SQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821" y="71"/>
+        </scene>
+        <!--ScrollView-->
+        <scene sceneID="dut-aL-Kmd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ScrollView" id="qKr-zr-KbU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="InJ-6O-F60" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="213"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="tpC-HE-Rfz">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MapStoryboard" storyboardName="Map" id="QqZ-y7-qQh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OsT-fj-5HG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="317"/>
+        </scene>
+    </scenes>
+</document>

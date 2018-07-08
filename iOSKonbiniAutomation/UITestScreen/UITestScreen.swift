@@ -8,9 +8,17 @@
 
 import XCTest
 
+/**
+ Protocol to allow us to use generics for function that provides new instance of screen objects
+ or reuses existing instance if it already exists
+ */
+public protocol UITestScreenInitialisableProtocol {
+  init()
+}
+
 protocol UITestScreenProtocol {
   /**
-   mandatory screen identifier which has be unique
+   optional screen identifier
    */
   var screenIdentifierPrefix: String { get }
   /**
@@ -23,7 +31,7 @@ protocol UITestScreenProtocol {
   var screenConnections: [UITestScreenEdge] { get }
 }
 
-open class UITestScreen: UITestScreenProtocol, Equatable {
+open class UITestScreen: UITestScreenProtocol, Equatable, UITestScreenInitialisableProtocol {
   var screenConnections: [UITestScreenEdge] = []
 
   public static func == (lhs: UITestScreen, rhs: UITestScreen) -> Bool {
@@ -35,13 +43,14 @@ open class UITestScreen: UITestScreenProtocol, Equatable {
     return screenTraitStrategy.traitCheck()
   }
   
-  var app: XCUIApplication {
+  public var app: XCUIApplication {
     return appSettings!.app
   }
   
-  public var screenIdentifierPrefix: String {
+  open var screenIdentifierPrefix: String {
     return ""
   }
+  
   open var screenTraitStrategy: TraitStrategy = .specificElements([])
   /**
    trait strategy setter for screen

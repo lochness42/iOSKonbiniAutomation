@@ -102,6 +102,9 @@
                 <a href="Functions.html#/s:20iOSKonbiniAutomation6Rotate2on8rotation12withVelocity4file4lineySo11XCUIElementC_12CoreGraphics7CGFloatVALs12StaticStringVSutF">Rotate(on:rotation:withVelocity:file:line:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="Functions.html#/s:20iOSKonbiniAutomation14ScreenIsActive_6within4file4lineyAA06UITestC0C_Sds12StaticStringVSutF">ScreenIsActive(_:within:file:line:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Functions.html#/s:20iOSKonbiniAutomation14ScreenIsActive_6within4file4lineyAA06UITestC0Cm_Sds12StaticStringVSutF">ScreenIsActive(_:within:file:line:)</a>
               </li>
               <li class="nav-group-task">
@@ -137,6 +140,17 @@
               <li class="nav-group-task">
                 <a href="Functions.html#/s:20iOSKonbiniAutomation7WaitFor7element2to6atMost4file4lineySo11XCUIElementC_Say010iOSBenrinaB7Helpers16ElementPredicateOGSds12StaticStringVSutF">WaitFor(element:to:atMost:file:line:)</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:20iOSKonbiniAutomation6screenyxxmAA33UITestScreenInitialisableProtocolRzlF">screen(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/UITestScreenInitialisableProtocol.html">UITestScreenInitialisableProtocol</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -145,12 +159,54 @@
         <section>
           <section class="section">
             
-            <h3 id='authors' class='heading'>Authors</h3>
+            <h1 id='ioskonbiniautomation-page-object-model-for-xcuitest-made-easy' class='heading'>iOSKonbiniAutomation - Page Object Model for XCUITest made easy</h1>
+
+<p><strong>iOSKonbiniAutomation</strong> is result of working on multiple projects with XCUITest. I&rsquo;ve seen multiple approaches and this is amalgamation of the bits that I liked the most. There is fair bit of inspiration by work of <a href="https://github.com/RayAnd">Andrey Kozlov</a>
+This project brings <a href="https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html">page object model</a> (or <strong>POM</strong> in short) approach to your projects. It also provides capability to build app transitions graph to be able to have automatic navigations from one screen to another.
+You also get assortment of ways to select your elements thanks to convenience functions added as extensions to XCUIElement and XCUIElementQuery via <strong>iOSBenrinaAutomationHelpers</strong></p>
+
+<p>Adding <strong>iOSKonbiniAutomation</strong> to project is super easy using <a href="https://github.com/Carthage/Carthage">Carthage</a> and you can start using it right away.</p>
+
+<p>This project is using under the hood <a href="https://github.com/lochness42/iOSBenrinaAutomationHelpers">iOSBenrinaAutomationHelpers</a> to make selections, element value settings, waiting etc. easier.</p>
+
+<blockquote>
+<p>Note: This project is targeting minimum iOS version 10.0 to support last two major iOS releases</p>
+</blockquote>
+<h1 id='installation' class='heading'>Installation</h1>
+
+<p><strong>iOSKonbiniAutomation</strong> can be installed with <a href="https://github.com/Carthage/Carthage">Carthage</a>, so please make sure that you got this prerequisite installed. After getting Carthage, you can follow steps <a href="https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos">here</a></p>
+
+<p>Cartfile reference to this repository should be as follows:</p>
+<pre class="highlight plaintext"><code>github "lochness42/iOSKonbiniAutomation"
+</code></pre>
+
+<blockquote>
+<p>Note: this will fetch also iOSBenrinaAutomationHelpers as dependency so don&rsquo;t forget to add those along with iOSKonbiniAutomation framework as it&rsquo;s necessary. </p>
+<h1 id='use' class='heading'>Use</h1>
+
+<p>Once you&rsquo;ve successfully added <strong>iOSKonbiniAutomation</strong> to your project, you can start using your convenience functions by adding to the header of your file:</p>
+<pre class="highlight plaintext"><code>import iOSKonbiniAutomation
+import iOSBenrinaAutomationHelpers
+</code></pre>
+
+<p>Once this is done, all convenience functions and new TestCase and Screen objects are exposed for your use.</p>
+</blockquote>
+
+<p>I&rsquo;m working on demo application which will show how to use this framework easily.</p>
+<h1 id='contribution' class='heading'>Contribution</h1>
+
+<p>Please feel free to fork, create pull requests and to open issues for any discovered issues or suggestions for additions. I really appreciate everyone&rsquo;s input as I would like to make test automation less painful for all people.</p>
+<h1 id='acknowledgement' class='heading'>Acknowledgement</h1>
+
+<p>Big thanks to <a href="https://github.com/RayAnd">Andrey Kozlov</a> who inspired quite a bit of my work and had good discussions about how to approach this.</p>
+<h1 id='author' class='heading'>Author</h1>
+
+<p>lochness42, <a href="mailto:lochness42@gmail.com">lochness42@gmail.com</a></p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-06-24)</p>
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-07-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

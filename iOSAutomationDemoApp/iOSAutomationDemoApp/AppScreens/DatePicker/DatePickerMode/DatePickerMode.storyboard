@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9J3-Q8-7Sl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DatePickerMode-->
+        <scene sceneID="kum-YF-Tew">
+            <objects>
+                <viewController storyboardIdentifier="DatePickerModeStoryboard" title="DatePickerMode" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6bP-09-Rhk" customClass="DatePickerModeViewController" customModule="iOSAutomationDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FtJ-i9-6QE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLD-tb-V7q">
+                                <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                                <accessibility key="accessibilityConfiguration" identifier="datePickerMode.datePickerFormat">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <outlet property="dataSource" destination="6bP-09-Rhk" id="wdU-jH-NjX"/>
+                                    <outlet property="delegate" destination="6bP-09-Rhk" id="zZK-XQ-kHf"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="datePickerMode">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="0yM-dL-fcw" firstAttribute="top" secondItem="PLD-tb-V7q" secondAttribute="top" id="Scg-PN-l71"/>
+                            <constraint firstItem="PLD-tb-V7q" firstAttribute="leading" secondItem="FtJ-i9-6QE" secondAttribute="leading" id="Z5d-jL-VgA"/>
+                            <constraint firstItem="PLD-tb-V7q" firstAttribute="width" secondItem="FtJ-i9-6QE" secondAttribute="width" id="aP4-fA-gPU"/>
+                            <constraint firstItem="PLD-tb-V7q" firstAttribute="height" secondItem="FtJ-i9-6QE" secondAttribute="height" id="idb-rZ-Q14"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0yM-dL-fcw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="DatePickerMode" id="Vgz-TZ-z1j">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="05W-O3-Dr7">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="cancel"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cancelModeSetup:" destination="6bP-09-Rhk" id="ntm-jb-lGg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xpt-0G-fnz">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="save"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="saveMode:" destination="6bP-09-Rhk" id="bB3-5D-gER"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="modePicker" destination="PLD-tb-V7q" id="q9D-gZ-DI1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVn-Da-QLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936.79999999999995" y="99.400299850074973"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QFK-Ni-iQJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9J3-Q8-7Sl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZU8-XL-Zkr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6bP-09-Rhk" kind="relationship" relationship="rootViewController" id="7Fz-Z5-coW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOq-Cz-iqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="99.400299850074973"/>
+        </scene>
+    </scenes>
+</document>

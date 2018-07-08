@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HuT-Tt-FSQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="Ikl-xf-t3f">
+            <objects>
+                <viewController storyboardIdentifier="MapStoryboard" title="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HuT-Tt-FSQ" customClass="MapViewController" customModule="iOSAutomationDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hs9-84-b1A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x8w-ec-cjU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="map.mapView"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="HuT-Tt-FSQ" id="Ez6-5u-oFL"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="map">
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="x8w-ec-cjU" firstAttribute="width" secondItem="hs9-84-b1A" secondAttribute="width" id="aqB-mr-Xg3"/>
+                            <constraint firstItem="x8w-ec-cjU" firstAttribute="height" secondItem="hs9-84-b1A" secondAttribute="height" id="hZu-co-Puv"/>
+                            <constraint firstItem="x8w-ec-cjU" firstAttribute="leading" secondItem="hs9-84-b1A" secondAttribute="leading" id="kxq-5B-ozH"/>
+                            <constraint firstItem="x8w-ec-cjU" firstAttribute="bottom" secondItem="onl-hl-Cjo" secondAttribute="bottom" id="ldZ-cQ-owG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="onl-hl-Cjo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wqg-p1-uog"/>
+                    <connections>
+                        <outlet property="mapView" destination="x8w-ec-cjU" id="rgV-eG-ga6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SzM-sv-yHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656.79999999999995" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
