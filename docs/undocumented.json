@@ -65,6 +65,13 @@
     },
     {
       "file": "/Users/lochness42/GIT/iOSKonbiniAutomationGitHub/iOSKonbiniAutomation/Extensions/UITestCase+InterruptionHandlers.swift",
+      "line": 15,
+      "symbol": "UITestCase.SystemAlertHandlerSettings.init(description:text:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/iOSKonbiniAutomationGitHub/iOSKonbiniAutomation/Extensions/UITestCase+InterruptionHandlers.swift",
       "line": 22,
       "symbol": "UITestCase.addUISystemAlertHandler(settings:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -151,6 +158,13 @@
       "file": "/Users/lochness42/GIT/iOSKonbiniAutomationGitHub/iOSKonbiniAutomation/UITestScreen/UITestScreen.swift",
       "line": 42,
       "symbol": "UITestScreen.isCurrentScreen",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lochness42/GIT/iOSKonbiniAutomationGitHub/iOSKonbiniAutomation/UITestScreen/UITestScreen.swift",
+      "line": 46,
+      "symbol": "UITestScreen.app",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     }

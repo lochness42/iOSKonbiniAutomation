@@ -14,7 +14,7 @@
     <a title="UITestScreen Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (73% documented)</p>
+        <p><a href="../index.html"> Docs</a> (72% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -40,7 +40,7 @@
                 <a href="../Classes/UITestCase.html">UITestCase</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/UITestCase.html#/s:20iOSKonbiniAutomation10UITestCaseC26SystemAlertHandlerSettingsV">– SystemAlertHandlerSettings</a>
+                <a href="../Classes/UITestCase/SystemAlertHandlerSettings.html">– SystemAlertHandlerSettings</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/UITestScreen.html">UITestScreen</a>
@@ -255,6 +255,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:20iOSKonbiniAutomation12UITestScreenC3appSo15XCUIApplicationCvp"></a>
+                    <a name="//apple_ref/swift/Property/app" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20iOSKonbiniAutomation12UITestScreenC3appSo15XCUIApplicationCvp">app</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">app</span><span class="p">:</span> <span class="kt">XCUIApplication</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:20iOSKonbiniAutomation20UITestScreenProtocolP22screenIdentifierPrefixSSvp"></a>
                     <a name="//apple_ref/swift/Property/screenIdentifierPrefix" class="dashAnchor"></a>
                     <a class="token" href="#/s:20iOSKonbiniAutomation20UITestScreenProtocolP22screenIdentifierPrefixSSvp">screenIdentifierPrefix</a>
@@ -271,7 +298,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">screenIdentifierPrefix</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">screenIdentifierPrefix</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -352,10 +379,115 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20iOSKonbiniAutomation12UITestScreenC10screenNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/screenName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20iOSKonbiniAutomation12UITestScreenC10screenNameSSvp">screenName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns string representing current screen object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">screenName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:20iOSKonbiniAutomation12UITestScreenC9connectTo6screen10transition14postTransitionyACm_yycyycSgtF"></a>
+                    <a name="//apple_ref/swift/Method/connectTo(screen:transition:postTransition:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:20iOSKonbiniAutomation12UITestScreenC9connectTo6screen10transition14postTransitionyACm_yycyycSgtF">connectTo(screen:transition:postTransition:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets connection between current screen and target screen</p>
+<h2 id='usage-example' class='heading'>Usage Example:</h2>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">navigationStepsToScreenA</span><span class="p">(){}</span>
+<span class="k">self</span><span class="o">.</span><span class="nf">connectTo</span><span class="p">(</span><span class="nv">screen</span><span class="p">:</span> <span class="kt">UITestScreenA</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">transition</span><span class="p">:</span> <span class="n">navigationStepsToScreenA</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">connectTo</span><span class="p">(</span><span class="nv">screen</span><span class="p">:</span> <span class="kt">UITestScreen</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">transition</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span> <span class="nv">postTransition</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>screen</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>target screen</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transition</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>closure containing steps to make transition from current screen ot target screen</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>postTransition</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>optional steps to be performed after getting to target screen</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-07-05)</p>
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-07-08)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
