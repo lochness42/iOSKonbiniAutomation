@@ -63,11 +63,12 @@
                         <segue destination="7LZ-Vs-tHD" kind="show" identifier="DatePicker" id="0R6-eh-Awo"/>
                         <segue destination="qKr-zr-KbU" kind="show" identifier="ScrollView" id="98S-vg-I9f"/>
                         <segue destination="QqZ-y7-qQh" kind="show" identifier="Map" id="1if-ht-Dtv"/>
+                        <segue destination="Yh4-wZ-CGg" kind="show" identifier="LaunchInfo" id="Wfc-Gc-3WF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vuh-ZN-TzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159" y="72"/>
+            <point key="canvasLocation" x="-796" y="71"/>
         </scene>
         <!--Home-->
         <scene sceneID="v3k-ce-CY2">
@@ -85,7 +86,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFx-YP-CNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-940" y="72"/>
+            <point key="canvasLocation" x="-1642" y="71"/>
         </scene>
         <!--DelayWait-->
         <scene sceneID="euk-w8-4yU">
@@ -101,7 +102,7 @@
                 <viewControllerPlaceholder storyboardName="DatePicker" id="7LZ-Vs-tHD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81Z-EN-SQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="821" y="71"/>
+            <point key="canvasLocation" x="830" y="-128"/>
         </scene>
         <!--ScrollView-->
         <scene sceneID="dut-aL-Kmd">
@@ -109,7 +110,7 @@
                 <viewControllerPlaceholder storyboardName="ScrollView" id="qKr-zr-KbU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="InJ-6O-F60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="213"/>
+            <point key="canvasLocation" x="828" y="-63"/>
         </scene>
         <!--Map-->
         <scene sceneID="tpC-HE-Rfz">
@@ -117,7 +118,15 @@
                 <viewControllerPlaceholder storyboardIdentifier="MapStoryboard" storyboardName="Map" id="QqZ-y7-qQh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OsT-fj-5HG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="317"/>
+            <point key="canvasLocation" x="798" y="16"/>
+        </scene>
+        <!--LaunchInfo-->
+        <scene sceneID="7H8-kO-pdB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LaunchInfo" id="Yh4-wZ-CGg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XiM-jm-FWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832" y="95"/>
         </scene>
     </scenes>
 </document>

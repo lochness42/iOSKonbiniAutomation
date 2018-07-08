@@ -34,6 +34,10 @@ class Home: UITestScreen {
   public var scrollViewScreenCell: XCUIElement {
     return table.descendants(ofType: .cell, which: [.endsWith(.identifier, ".scrollview")]).element(boundBy: 0)
   }
+
+  public var launchInfoScreenCell: XCUIElement {
+    return table.descendants(ofType: .cell, which: [.endsWith(.identifier, ".launchinfo")]).element(boundBy: 0)
+  }
   
   required init() {
     super.init()
@@ -42,5 +46,6 @@ class Home: UITestScreen {
     connectTo(screen: DelayWait.self, transition: { Tap(on: self.delayWaitScreenCell) })
     connectTo(screen: DatePicker.self, transition: { Tap(on: self.datePickerScreenCell) })
     connectTo(screen: Map.self, transition: { Tap(on: self.mapScreenCell) })
+    connectTo(screen: LaunchInfo.self, transition: { Tap(on: self.launchInfoScreenCell) })
   }
 }

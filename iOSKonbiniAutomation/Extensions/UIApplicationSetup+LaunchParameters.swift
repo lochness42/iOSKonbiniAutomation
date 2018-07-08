@@ -21,7 +21,7 @@ extension UIApplicationSetup {
   
   public func setLaunchEnvironment(_ parameters: [String: String]) {
     for (name, value) in parameters {
-      setLaunchEnvironmentParameter(name: name, value: value)
+      setLaunchEnvironmentParameter(name: "test_environment_\(name)", value: value)
     }
   }
 }

@@ -67,7 +67,9 @@ open class UITestCase: XCTestCase {
   /**
    feature toggles - dictionary - used to toggle features in app by passing them as part of
    */
-  open var featureToggles: [String: String] = [:]
+  open var featureToggles: [String: String] {
+    return [String: String]()
+  }
 
   override open func setUp() {
     super.setUp()

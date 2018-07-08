@@ -15,6 +15,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     case ScrollView
     case DelayWait
     case Map
+    case LaunchInfo
 
     var tableIdentifier: String {
       switch self {
@@ -26,6 +27,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return NSLocalizedString("DelayWait", comment: "DelayWait screen navigation cell title")
       case .Map:
         return NSLocalizedString("Map", comment: "Map screen navigation cell title")
+      case .LaunchInfo:
+        return NSLocalizedString("LaunchInfo", comment: "Launch info screen navigation cell title")
       }
     }
     var segueIdentifier: String {
@@ -38,6 +41,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return "DelayWait"
       case .Map:
         return "Map"
+      case .LaunchInfo:
+        return "LaunchInfo"
       }
     }
   }
@@ -45,7 +50,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
   @IBOutlet weak var homeTableView: UITableView!
   @IBOutlet weak var homeTableViewCell: UITableViewCell!
 
-  var homeNavigation: [HomeNavigation] = [.DatePicker, .ScrollView, .DelayWait, .Map]
+  var homeNavigation: [HomeNavigation] = [.DatePicker, .ScrollView, .DelayWait, .Map, .LaunchInfo]
 
   override func viewDidLoad() {
     super.viewDidLoad()

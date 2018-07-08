@@ -11,6 +11,24 @@ import iOSBenrinaAutomationHelpers
 import iOSKonbiniAutomation
 
 class iOSAutomationDemoAppUITests: UIDemoTestCase {
+  override var featureToggles: [String: String] { return [
+    "first_toggle": "first_value",
+    "second_toggle": "second_value",
+    "third_toggle": "third_value"
+    ]}
+
+  func testSetLaunchInfo() {
+    NavigateToScreen(to: LaunchInfo.self)
+    Tap(on: screen(LaunchInfo.self).launchArgumentsButton)
+    WaitFor(element: screen(LaunchInfo.self).alert, to: [.exists])
+    XCTAssertTrue(screen(LaunchInfo.self).verifyLaunchArguments(["test_argument_schema"]))
+    screen(LaunchInfo.self).dismissAlert()
+    Tap(on: screen(LaunchInfo.self).launchEnvironmentButton)
+
+    WaitFor(element: screen(LaunchInfo.self).alert, to: [.exists])
+    XCTAssertTrue(screen(LaunchInfo.self).verifyLaunchEnvironment(featureToggles, prefix: "test_environment_"))
+    XCTAssertTrue(screen(LaunchInfo.self).verifyLaunchEnvironment(["test_environment_schema": "schema_value"]))
+  }
 
   func testScrollViewHandling() {
     ScreenIsActive(Home.self)

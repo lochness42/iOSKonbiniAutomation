@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WdZ-1X-WnA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LaunchInfo-->
+        <scene sceneID="p0N-cC-2O5">
+            <objects>
+                <viewController storyboardIdentifier="LaunchInfoStoryboard" title="LaunchInfo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WdZ-1X-WnA" customClass="LaunchInfoViewController" customModule="iOSAutomationDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LvD-bM-dHd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZ9-uH-MzR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="launchInfo.arguments">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <state key="normal" title="Launch Arguments"/>
+                                <connections>
+                                    <action selector="showArgumentsSettings:" destination="WdZ-1X-WnA" eventType="touchUpInside" id="QGm-tt-buM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzG-hn-Phm">
+                                <rect key="frame" x="0.0" y="60" width="375" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="launchInfo.environment">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <state key="normal" title="Launch Environment"/>
+                                <connections>
+                                    <action selector="showEnvironmentSettings:" destination="WdZ-1X-WnA" eventType="touchUpInside" id="dou-Zt-Iqn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="launchInfo"/>
+                        <constraints>
+                            <constraint firstItem="kzG-hn-Phm" firstAttribute="leading" secondItem="TZ9-uH-MzR" secondAttribute="leading" id="9bI-Ib-x6j"/>
+                            <constraint firstItem="TZ9-uH-MzR" firstAttribute="width" secondItem="AY8-n1-srA" secondAttribute="width" id="Gd6-f2-cCl"/>
+                            <constraint firstItem="AY8-n1-srA" firstAttribute="top" secondItem="TZ9-uH-MzR" secondAttribute="top" id="Mb3-mE-ZGh"/>
+                            <constraint firstItem="kzG-hn-Phm" firstAttribute="width" secondItem="TZ9-uH-MzR" secondAttribute="width" id="jof-M5-QbM"/>
+                            <constraint firstItem="kzG-hn-Phm" firstAttribute="top" secondItem="TZ9-uH-MzR" secondAttribute="bottom" constant="10" id="lDP-X0-7KL"/>
+                            <constraint firstItem="AY8-n1-srA" firstAttribute="centerX" secondItem="TZ9-uH-MzR" secondAttribute="centerX" id="oK7-4e-3gB"/>
+                            <constraint firstItem="kzG-hn-Phm" firstAttribute="height" secondItem="TZ9-uH-MzR" secondAttribute="height" id="x9h-ko-V3Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AY8-n1-srA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cR9-gc-20L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16.800000000000001" y="127.28635682158921"/>
+        </scene>
+    </scenes>
+</document>

@@ -26,6 +26,9 @@
 		10D47D1920F21F2E00CF9B6A /* DelayWaitScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D47D1820F21F2E00CF9B6A /* DelayWaitScreen.swift */; };
 		10D47D1F20F2268900CF9B6A /* iOSBenrinaAutomationHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D47D1D20F2268900CF9B6A /* iOSBenrinaAutomationHelpers.framework */; };
 		10D47D2120F22AB400CF9B6A /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D47D2020F22AB400CF9B6A /* MapScreen.swift */; };
+		10D47D2420F27C7D00CF9B6A /* LaunchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D47D2320F27C7D00CF9B6A /* LaunchInfoViewController.swift */; };
+		10D47D2620F27C8C00CF9B6A /* LaunchInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D47D2520F27C8C00CF9B6A /* LaunchInfo.storyboard */; };
+		10D47D2820F286CC00CF9B6A /* LaunchInfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D47D2720F286CC00CF9B6A /* LaunchInfoScreen.swift */; };
 		EB07D0B220EF8B31008AF0C7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB07D0B120EF8B31008AF0C7 /* Home.storyboard */; };
 		EB07D0B420EF8B41008AF0C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07D0B320EF8B41008AF0C7 /* HomeViewController.swift */; };
 		EB07D0B620F25EDE008AF0C7 /* NavigationBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07D0B520F25EDE008AF0C7 /* NavigationBarComponent.swift */; };
@@ -86,6 +89,9 @@
 		10D47D1C20F2268900CF9B6A /* iOSKonbiniAutomation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOSKonbiniAutomation.framework; path = Carthage/Build/iOS/iOSKonbiniAutomation.framework; sourceTree = "<group>"; };
 		10D47D1D20F2268900CF9B6A /* iOSBenrinaAutomationHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iOSBenrinaAutomationHelpers.framework; path = Carthage/Build/iOS/iOSBenrinaAutomationHelpers.framework; sourceTree = "<group>"; };
 		10D47D2020F22AB400CF9B6A /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		10D47D2320F27C7D00CF9B6A /* LaunchInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInfoViewController.swift; sourceTree = "<group>"; };
+		10D47D2520F27C8C00CF9B6A /* LaunchInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchInfo.storyboard; sourceTree = "<group>"; };
+		10D47D2720F286CC00CF9B6A /* LaunchInfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInfoScreen.swift; sourceTree = "<group>"; };
 		EB07D0B120EF8B31008AF0C7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		EB07D0B320EF8B41008AF0C7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EB07D0B520F25EDE008AF0C7 /* NavigationBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarComponent.swift; sourceTree = "<group>"; };
@@ -198,9 +204,19 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		10D47D2220F27C6200CF9B6A /* LaunchInfo */ = {
+			isa = PBXGroup;
+			children = (
+				10D47D2520F27C8C00CF9B6A /* LaunchInfo.storyboard */,
+				10D47D2320F27C7D00CF9B6A /* LaunchInfoViewController.swift */,
+			);
+			path = LaunchInfo;
+			sourceTree = "<group>";
+		};
 		EB07D0AF20EF8A9B008AF0C7 /* AppScreens */ = {
 			isa = PBXGroup;
 			children = (
+				10D47D2220F27C6200CF9B6A /* LaunchInfo */,
 				10D47D0920F1FE8B00CF9B6A /* Map */,
 				107880A220EFF98000EC0258 /* DelayWait */,
 				107880A120EFF97900EC0258 /* ScrollView */,
@@ -302,6 +318,7 @@
 				10D47D1820F21F2E00CF9B6A /* DelayWaitScreen.swift */,
 				10D47D2020F22AB400CF9B6A /* MapScreen.swift */,
 				EB07D0B520F25EDE008AF0C7 /* NavigationBarComponent.swift */,
+				10D47D2720F286CC00CF9B6A /* LaunchInfoScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -426,6 +443,7 @@
 				EBAA19CE20EB7DA5006B9A8A /* Main.storyboard in Resources */,
 				102D77D420F1380C007E28EB /* DatePickerLocale.storyboard in Resources */,
 				10D47D0B20F1FE9A00CF9B6A /* Map.storyboard in Resources */,
+				10D47D2620F27C8C00CF9B6A /* LaunchInfo.storyboard in Resources */,
 				EB07D0B220EF8B31008AF0C7 /* Home.storyboard in Resources */,
 				EB07D0BD20F26D17008AF0C7 /* InfoPlist.strings in Resources */,
 				107880A620EFF9A300EC0258 /* DatePicker.storyboard in Resources */,
@@ -478,6 +496,7 @@
 				102D77D220F13801007E28EB /* DatePickerLocaleViewController.swift in Sources */,
 				EBAA19CB20EB7DA5006B9A8A /* ViewController.swift in Sources */,
 				10D47D0D20F1FEA700CF9B6A /* MapViewController.swift in Sources */,
+				10D47D2420F27C7D00CF9B6A /* LaunchInfoViewController.swift in Sources */,
 				107880AA20EFF9BA00EC0258 /* ScrollViewViewController.swift in Sources */,
 				102D77D020F137ED007E28EB /* DatePickerModeViewController.swift in Sources */,
 				EBAA19C920EB7DA5006B9A8A /* AppDelegate.swift in Sources */,
@@ -497,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10D47D2820F286CC00CF9B6A /* LaunchInfoScreen.swift in Sources */,
 				EB07D0C820F27443008AF0C7 /* iOSAutomationDemoAppUITestJA.swift in Sources */,
 				10D47D2120F22AB400CF9B6A /* MapScreen.swift in Sources */,
 				EBAA1A0E20EBC3AF006B9A8A /* HomeScreen.swift in Sources */,
