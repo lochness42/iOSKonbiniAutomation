@@ -27,7 +27,11 @@ import XCTest
 
  */
 public func WaitFor(element: XCUIElement, to predicates: [ElementPredicate], atMost timeout: TimeInterval = defaultTimeout, file: StaticString = #file, line: UInt = #line) {
-  return XCTContext.runActivity(named: "Waiting for element to \"\(NSPredicate(elementPredicates: predicates).predicateFormat)\" within \(timeout)s for \(element.debugDescription)") { _ -> Void in
+  let activityContext = String(format: "Waiting for element to \"%@\" within %ds for %@",
+                               NSPredicate(elementPredicates: predicates).predicateFormat,
+                               timeout,
+                               element.debugDescription)
+  return XCTContext.runActivity(named: activityContext) { _ -> Void in
     XCTAssertTrue(element.wait(until: predicates, atMostFor: timeout), file: file, line: line)
   }
 }

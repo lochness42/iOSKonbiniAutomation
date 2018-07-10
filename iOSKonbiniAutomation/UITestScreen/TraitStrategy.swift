@@ -12,23 +12,7 @@ import iOSBenrinaAutomationHelpers
 /**
  Trait strategy enum containing strategies to check whether we're on chosen screen
  */
-public enum TraitStrategy: Equatable {
-  public static func == (lhs: TraitStrategy, rhs: TraitStrategy) -> Bool {
-    switch (lhs, rhs) {
-    case let (.anyWithScreenIdentifierPrefix(lhsElementType, lhsIdentifierPrefix), .anyWithScreenIdentifierPrefix(rhsElementType, rhsIdentifierPrefix)):
-      return lhsElementType == rhsElementType && lhsIdentifierPrefix == rhsIdentifierPrefix
-    case let (.atLeastXWithScreenIdentifierPrefix(lhsElementType, lhsIdentifierPrefix, lhsMinimumCount), .atLeastXWithScreenIdentifierPrefix(rhsElementType, rhsIdentifierPrefix, rhsMinimumCount)):
-      return lhsElementType == rhsElementType && lhsIdentifierPrefix == rhsIdentifierPrefix && lhsMinimumCount == rhsMinimumCount
-    case let (.anyWithElementAtrributePrefix(lhsElementType, lhsElementAttribute, lhsIdentifierPrefix), .anyWithElementAtrributePrefix(rhsElementType, rhsElementAttribute, rhsIdentifierPrefix)):
-      return lhsElementType == rhsElementType && lhsIdentifierPrefix == rhsIdentifierPrefix && lhsElementAttribute == rhsElementAttribute
-    case let (.atLeastXWithElementAtrributePrefix(lhsElementType, lhsElementAttribute, lhsIdentifierPrefix, lhsMinimumCount), .atLeastXWithElementAtrributePrefix(rhsElementType, rhsElementAttribute, rhsIdentifierPrefix, rhsMinimumCount)):
-      return lhsElementType == rhsElementType && lhsIdentifierPrefix == rhsIdentifierPrefix && lhsMinimumCount == rhsMinimumCount && lhsElementAttribute == rhsElementAttribute
-    case let (.specificElements(lhsElements), .specificElements(rhsElements)):
-      return lhsElements == rhsElements
-    default:
-      return false
-    }
-  }
+public enum TraitStrategy {
 
   /**
    strategy that expects at least one element with accessibility identifierPrefix

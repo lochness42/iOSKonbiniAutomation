@@ -9,7 +9,7 @@
 /**
  Representing directed connection between two screen objects
  */
-class UITestScreenEdge: Equatable {
+class UITestScreenEdge {
 
   /**
    Representing source screen
@@ -54,10 +54,6 @@ class UITestScreenEdge: Equatable {
     self.target = target
     self.transition = transition
     self.postTransition = postTransition
-  }
-
-  static func == (lhs: UITestScreenEdge, rhs: UITestScreenEdge) -> Bool {
-    return String(describing: lhs.source) == String(describing: rhs.source) && String(describing: lhs.target) == String(describing: rhs.target)
   }
 
 }

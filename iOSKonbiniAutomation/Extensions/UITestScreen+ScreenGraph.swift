@@ -30,7 +30,9 @@ extension UITestScreen {
    */
   public func connectTo(screen: UITestScreen.Type, transition: @escaping () -> Void, postTransition: (() -> Void)? = nil) {
     let connection: UITestScreenEdge = .init(source: type(of: self), target: screen, transition: transition, postTransition: postTransition)
-    if !self.screenConnections.contains(connection) {
+    if (!self.screenConnections.contains { checkedConnection in
+      return String(describing: connection.source) == String(describing: checkedConnection.source)
+          && String(describing: connection.target) == String(describing: checkedConnection.target)}) {
       self.screenConnections.append(connection)
     }
   }

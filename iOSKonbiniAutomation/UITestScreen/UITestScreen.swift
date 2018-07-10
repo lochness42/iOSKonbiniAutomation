@@ -18,7 +18,7 @@ public protocol UITestScreenInitialisableProtocol {
 
 protocol UITestScreenProtocol {
   /**
-   optional screen identifier
+   optional screen identifier (preferred to have it)
    */
   var screenIdentifierPrefix: String { get }
   /**
@@ -29,14 +29,12 @@ protocol UITestScreenProtocol {
    list of connections to other screens
    */
   var screenConnections: [UITestScreenEdge] { get }
+
+  func addIdentifierPrefixTo(_ sufix: String) -> String
 }
 
-open class UITestScreen: UITestScreenProtocol, Equatable, UITestScreenInitialisableProtocol {
+open class UITestScreen: UITestScreenProtocol, UITestScreenInitialisableProtocol {
   var screenConnections: [UITestScreenEdge] = []
-
-  public static func == (lhs: UITestScreen, rhs: UITestScreen) -> Bool {
-    return lhs.screenTraitStrategy == rhs.screenTraitStrategy
-  }
 
   required public init() {}
   public var isCurrentScreen: Bool {
@@ -50,7 +48,11 @@ open class UITestScreen: UITestScreenProtocol, Equatable, UITestScreenInitialisa
   open var screenIdentifierPrefix: String {
     return ""
   }
-  
+
+  func addIdentifierPrefixTo(_ sufix: String) -> String {
+    return String(format: "%@.%@", screenIdentifierPrefix, sufix)
+  }
+
   open var screenTraitStrategy: TraitStrategy = .specificElements([])
   /**
    trait strategy setter for screen
